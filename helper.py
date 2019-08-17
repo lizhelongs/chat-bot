@@ -24,11 +24,19 @@ def extractName(message):
     # Create a spacy document
     doc = nlp(message)
     for ent in doc.ents:
-        ents[ent.label_] = ent
+        #if ents[ent.label_] is None:
+            ents[ent.label_] = ent
+        #else:
+         #   temp = []
+          #  temp.extend(ents[ent.label_])
+           # temp.append(ent)
+            #ents[ent.label_] = temp
     return ents['ORG']
 
 
 
-#print(extractName("ISRG, please"))
+#print(extractName("I want to search for TSLA instead of ISRG now"))
+#print(type(extractName("I changed for searching about JD now")))
+
     
 
