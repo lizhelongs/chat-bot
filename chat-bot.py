@@ -147,7 +147,7 @@ def respond(name, message):
     attr = intent(phrase)
     #strip off punctuation
     regex = re.compile('[%s]' % re.escape(string.punctuation))
-    phrase = re.sub(regex,'',phraseq)
+    phrase = re.sub(regex,'',phrase)
     info = str(get_info(str(name), str(attr)))
     return response + phrase + " is " + info
 
